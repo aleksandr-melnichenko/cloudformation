@@ -132,7 +132,7 @@ Resources:
               mysql: [] #if there is no version already installed...installing mysql latest available version using yum
               php-mysql: [] #if there is no version already installed...installing php-mysql latest available version using yum
           sources:
-            /var/www/html: "http://wordpress.org/latest.tar.gz"
+            /var/www/html: "http://wordpress.org/latest.tar.gz" #download file and extract to html folder  
           services:
             sysvinit:
               httpd:
