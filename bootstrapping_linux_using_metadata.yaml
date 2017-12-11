@@ -125,10 +125,10 @@ Resources:
         install_wordpress:
           packages:
             yum:
-              httpd: []
-              php: []
-              mysql: []
-              php-mysql: []
+              httpd: []  #installing httpd/apache latest available version using yum
+              php: [] #installing php latest available version using yum
+              mysql: [] #installing mysql latest available version using yum
+              php-mysql: [] #installing php-mysql latest available version using yum
           sources:
             /var/www/html: "http://wordpress.org/latest.tar.gz"
           services:
@@ -139,7 +139,7 @@ Resources:
         config_wordpress:
           commands:
             01_clone_config:
-              cwd: "/var/www/html/wordpress"
+              cwd: "/var/www/html/wordpress" #cwd set current working directory
               test: "test ! -e /var/www/html/wordpress/wp-config.php"
               command: "cp wp-config-sample.php wp-config.php"
             02_inject_dbhost:
