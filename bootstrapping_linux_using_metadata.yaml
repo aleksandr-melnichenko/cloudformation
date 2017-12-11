@@ -143,7 +143,7 @@ Resources:
             01_clone_config:
               cwd: "/var/www/html/wordpress" #cwd set current working directory
               test: "test ! -e /var/www/html/wordpress/wp-config.php"
-              command: "cp wp-config-sample.php wp-config.php"
+              command: "cp wp-config-sample.php wp-config.php" #run command
             02_inject_dbhost:
               cwd: "/var/www/html/wordpress"
               command: !Sub |
