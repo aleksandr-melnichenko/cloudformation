@@ -127,10 +127,10 @@ Resources:
         install_wordpress:
           packages:
             yum:
-              httpd: []  #installing httpd/apache latest available version using yum
-              php: [] #installing php latest available version using yum
-              mysql: [] #installing mysql latest available version using yum
-              php-mysql: [] #installing php-mysql latest available version using yum
+              httpd: []  #if there is no version already installed...installing apache latest available version using yum
+              php: [] #if there is no version already installed...installing php latest available version using yum
+              mysql: [] #if there is no version already installed...installing mysql latest available version using yum
+              php-mysql: [] #if there is no version already installed...installing php-mysql latest available version using yum
           sources:
             /var/www/html: "http://wordpress.org/latest.tar.gz"
           services:
