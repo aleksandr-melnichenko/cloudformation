@@ -1,3 +1,5 @@
+#catch any stack changes and re-run cfn-init 
+
 Parameters:
   EnvironmentSize:
     Type: String
@@ -96,7 +98,7 @@ Resources:
             /etc/cfn/hooks.d/cfn-auto-reloader.conf:
               content: !Sub |
                 [cfn-auto-reloader-hook]
-                triggers=post.update #trigger when ever stack is updated do action below
+                triggers=post.update #trigger when ever stack is updated do action below (re-run cfn-init)
                 path=Resources.EC2.Metadata.AWS::CloudFormation::Init
                 action=/opt/aws/bin/cfn-init -v --stack ${AWS::StackName} --resource EC2 --configsets wordpress --region ${AWS::Region}
               mode: "000400"
