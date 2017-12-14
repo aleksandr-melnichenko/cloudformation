@@ -17,7 +17,7 @@
 #
 #=============
 #Toubleshooting:
-#cd /var/log/cfn-init.log -log file that outputs the status of the cfn-init process
+#cd /var/log/cfn-init.log -log file that outputs the status of the cfn-init process [For Windows: The cfn-init log at C:\cfn\log\cfn-init.log]
 #cd /var/log/cloud-init-output.log -detailed output of normal userdata
 
 #EXAMPLE
